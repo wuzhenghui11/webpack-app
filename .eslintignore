@@ -1,0 +1,8 @@
+/dist
+/webpack.config.js
+/.idea
+/.vscode
+/node_modules
+/client
+/program
+/server

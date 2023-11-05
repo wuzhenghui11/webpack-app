@@ -1,0 +1,17 @@
+{
+  "type": "object",
+  "properties": {
+    "author": {
+      "type": "string"
+    },
+    "parser": {
+      "type": "object",
+      "properties": {
+        "parser": {
+          "type": "function"
+        }
+      }
+    }
+  },
+  "aaditionalProperties": true
+}
