@@ -132,11 +132,11 @@ export default (env) => {
           use: [
             // 文件多开启多进程会有速度上的提升 否则会更慢
             /* {
-                  loader: 'thread-loader', // 多进程
-                  options: {
-                    works: useThreadNum(), // 进程数量
-                  }
-                }, */
+              loader: 'thread-loader', // 多进程
+              options: {
+                works: useThreadNum(), // 进程数量
+              }
+            }, */
             {
               loader: 'babel-loader',
               options: {
