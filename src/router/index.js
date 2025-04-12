@@ -5,7 +5,7 @@ const About = () => import(/* webpackChunkName: 'About' */'@/views/About.vue')
 
 
 export default createRouter({
-  history: createWebHashHistory(),
+  history: createWebHashHistory(window.__POWERED_BY_QIANKUN__ ? '#/webpack-app-vue-micro' : '#/webpack-app-vue-micro'),
   routes: [
     {
       path: '/',

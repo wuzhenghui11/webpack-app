@@ -6,6 +6,9 @@ import HtmlWebpackPlugin from 'html-webpack-plugin'
 import { VueLoaderPlugin } from 'vue-loader'
 import webpack from 'webpack'
 
+// import { name } from '../package.json'
+// console.log(name)
+
 // json5
 import json5 from 'json5'
 
@@ -42,6 +45,10 @@ export default (env) => {
       // 图片 字体 通过type:asset  的name
       assetModuleFilename: 'static/media/[name][ext][query]',
       path: undefined,
+      // 共主应用 使用
+      library: `webpack-app-[name]`,
+      libraryTarget: 'umd',
+      chunkLoadingGlobal: `webpackJsonp_webpack-app`,
     },
     module: {
       rules: [
@@ -169,6 +176,9 @@ export default (env) => {
       port: 8090,
       // open: true,
       hot: true,
+      headers: {
+        'Access-Control-Allow-Origin': '*'
+      },
       historyApiFallback: true,
     },
     // 性能

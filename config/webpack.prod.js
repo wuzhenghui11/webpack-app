@@ -100,6 +100,10 @@ export default (env) => {
       assetModuleFilename: 'static/media/[name].[hash:10][ext][query]',
       path: path.resolve(__dirname, '../dist'),
       clean: true,
+      // 共主应用 使用
+      library: `webpack-app-[name]`,
+      libraryTarget: 'umd',
+      chunkLoadingGlobal: `webpackJsonp_webpack-app`,
     },
     module: {
       rules: [
