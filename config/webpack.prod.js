@@ -94,9 +94,9 @@ export default (env) => {
     output: {
       // filename: 'static/js/[name].bundle.js',
       filename: 'static/js/[name].[contenthash:10].js',
-      // 代码分割的chunk name
+      // 代码分割的chunk name 给打包输出的其他文件命名
       chunkFilename: 'static/js/[name].[contenthash:10].chunk.js',
-      // 图片 字体 通过type:asset  的name
+      // 图片 字体 通过type:asset  的name  统一给其他资源做处理 
       assetModuleFilename: 'static/media/[name].[hash:10][ext][query]',
       path: path.resolve(__dirname, '../dist'),
       clean: true,
